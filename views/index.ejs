@@ -1,0 +1,24 @@
+<% include header %>
+<div>
+<a type="button" class="btn btn-info" href="/create" >發表文章</a>
+</div>
+<table class="table">
+  
+  <thead>
+    <tr>
+      <th>日期</th>
+      <th>文章標題</th>
+      <th>作者</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% postcontent.forEach(function (posts, index) { %>
+     <tr>
+      <th><%= posts.Date %></th>
+      <th><a href="/post/<%= posts.id %>"><%= posts.Title %></th>
+      <th><%= posts.Author %></th>
+     </tr>
+    <% }) %>
+  </tbody>
+</table>
+<% include footer %>

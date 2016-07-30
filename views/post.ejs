@@ -1,0 +1,14 @@
+<% include header %>
+ <% postcontent.forEach(function (posts, index) { %>
+     <h4><%= posts.Title %></h4>
+      <p><%= posts.body %></p>
+      <p><%= posts.Author %></p>
+      <p><%= posts.Date %></p> 
+<div>
+  <a href="/edit/<%= posts.id %>" class="btn btn-warning">編輯文章</a>
+  <a href="/delete/<%= posts.id %>" class="btn btn-danger">刪除</a>
+  <a href="/" class="btn ">取消</a>
+  
+</div>
+<% }) %>
+<% include footer %>
